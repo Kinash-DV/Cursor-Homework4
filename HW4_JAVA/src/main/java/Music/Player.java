@@ -1,0 +1,14 @@
+package Music;
+
+public abstract class Player {
+    private PlayList playList;
+    public Player(PlayList playList) {
+        this.playList = playList;
+    }
+    public void play() {
+        System.out.println("The playlist is starting to play:");
+        if (playList != null)
+            for (PlayList.MusicRecord record : playList.getRecords())
+                System.out.println("\t" + record);
+    }
+}
